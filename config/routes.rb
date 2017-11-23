@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
   resources :cocktails do
-    resources :ingredients do
-      resources :doses
-
-    end
+    resources :doses
   end
 
   root to: 'cocktails#index'
