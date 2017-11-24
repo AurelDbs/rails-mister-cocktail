@@ -1,6 +1,7 @@
 <h1>Your cocktail</h1>
 
 <h2><%= @cocktail.name %></h2>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
 <h3>Ingredients:</h3>
 
