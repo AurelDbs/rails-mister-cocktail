@@ -2,28 +2,17 @@
 
 <h1>Cocktails</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Action</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @cocktails.each do |cocktail| %>
-      <tr>
-        <td><%= cocktail.name %></td>
-        <td>
-          <%= link_to 'Show', cocktail %> |
-          <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
-          <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li>
+      <%= cocktail.name %>
+      <%= link_to 'Show', cocktail %> |
+      <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
+      <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
 
 <br>
 
